@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We are learning EJs</title>
+</head>
+<body>
+
+    <h1> <%=title  %></h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi maxime soluta dicta nesciunt molestias aliquid ex quaerat, nulla dolore ab saepe aspernatur odit commodi repellat itaque voluptatibus aperiam cumque error!</p>
+
+    <%= new Date().toString() %>  
+
+    <% if(post.published){ %> 
+        <h3>title :<%= post.title %> </h3>
+        <p>body : <%= post.body %> </p>
+         
+    <% } else { %> 
+        <p> Post is not yet published</p>
+    <% } %> 
+
+   <ul>
+       <% if(posts.length){ %> 
+        <% for(let i of posts){ %> 
+            <li>
+               <%= i.title %> By <%= i.author %> 
+            </li>
+          <%} %> 
+        <% } %> 
+   </ul>
+</body>
+</html>
